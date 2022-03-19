@@ -1,8 +1,20 @@
-use crate::Stem;
+use crate::{Stem, Language, LanguageNotSupportedError};
 use super::word::Word;
 use super::rules;
 
-pub struct PorterStemmer;
+pub struct PorterStemmer {
+    language: Language
+}
+
+impl PorterStemmer {
+
+    fn new(language: Language) -> Result<PorterStemmer, LanguageNotSupportedError> {
+        match language {
+            Language::English => Ok(PorterStemmer { language }),
+            _ => Err(LanguageNotSupportedError)
+        }
+    }
+}
 
 impl Stem for PorterStemmer {
 
