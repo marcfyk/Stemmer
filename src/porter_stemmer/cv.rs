@@ -1,4 +1,4 @@
-use super::utils::{
+use crate::utils::english::{
     is_consonant,
     is_vowel,
 };

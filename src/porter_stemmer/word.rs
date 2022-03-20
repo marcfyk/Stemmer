@@ -1,4 +1,4 @@
-use super::utils::{is_consonant, is_vowel};
+use crate::utils::english::{is_consonant, is_vowel};
 use super::cv::{
     LetterType,
     cv_representation,

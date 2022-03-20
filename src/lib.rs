@@ -1,3 +1,4 @@
+mod utils;
 pub mod porter_stemmer;
 
 pub struct LanguageNotSupportedError;
